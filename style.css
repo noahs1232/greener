@@ -1,0 +1,212 @@
+/* STYLE SHEET FOR GREENER INVESTING */
+
+@charset "UTF-8";
+/* CSS Document */
+
+/* For all */
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+    font-family: 'Greycliff CF', sans-serif;
+}
+
+/* Colors:
+/* 
+/* Dark Green (Prim): #5DACA9; /* Dark Green */
+/* Greener off-white: #E6F4F3; /* Greener off-white */
+/* Light Green (Sec): #76B9B6; /* Light Green */
+/* Darkest Green: #427977 /* Darkest Green */
+/*
+*/
+
+body {
+    background-color: #E6F4F3; /* Greener off-white */
+}
+
+.prefinery-form-embed {
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+/* Navigation style*/
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #5DACA9; /* Dark Green */
+    font-family: 'Greycliff CF', sans-serif;
+}
+
+.logo {
+    color: #E6F4F3; /* Greener off-white */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.navbar-brand img
+{
+    height: 60px;
+    padding-left: 0spx;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: #E6F4F3; /* Greener off-white */
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Modal Button Design */
+.modal-btn {
+    display: none;
+}
+
+.modal-btn div {
+    width: 25px;
+    height: 3px;
+    background-color: #E6F4F3; /* Greener off-white */
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Dynamic Resize of nav elements: readjustment of width*/
+@media screen and (max-width: 1024px) {
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+}
+
+/* Dynamic resize: modal display*/
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh; /* full screen */
+        top: 8vh;
+        background-color: #76B9B6; /* Nav Green */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        transform: translateX(100%);
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .modal-btn{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+
+}
+
+/* Animation on modal open */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Modal Button Animation (to create x)*/
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* --- Coming Soon Section --- */
+#Coming_Soon
+{
+    padding: 80px 0;
+}
+
+.Coming_Soon
+{
+    padding: 20px;
+}
+
+.Coming_Soon h4
+{
+    padding: 5px;
+    margin-top: 25px;
+    color: #5DACA9!important; /* Dark Green */
+}
+
+.coming_soon-img
+{
+    width: 200px;
+    margin-top: 0px;
+}
+
+.coming_soon-img:hover
+{
+    transform: translateY(-10px);
+}
+
+
+img {
+    opacity: 1;
+}
+
+.mission-statement{
+    /* Layout */
+    padding-top: 120px;
+    margin: auto;
+    width: 60%;
+    display: block;
+    /* UI Properties */
+/*    background: transparent url('img/mission-statement.png') 0% 0% no-repeat padding-box;
+    opacity: 1;*/
+}
+
+p {
+    opacity: 1;
+}
+
+.about-mission {
+    /*padding-top: 40px;*/
+    margin: auto;
+    width: 60%;
+    display: block;
+}
+
